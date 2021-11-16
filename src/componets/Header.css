@@ -1,3 +1,19 @@
-.id{
-    color: white
+.titolo{
+    text-align: center;
+    color: white;
+    font-family: Stencil;
+    border-color: white;
+    border-bottom: solid;
+    border-width: thin;
 }
+
+  /*
+    HOVER
+    */
+    .titolo :hover{
+        padding-left: 2px;
+        padding-right: 2px;
+        background-color: whitesmoke;
+        border-radius: 10%;
+        color: black;    
+    }
