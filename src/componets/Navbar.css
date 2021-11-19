@@ -1,0 +1,21 @@
+.navbar{
+    text-align: center;
+}
+
+.active{
+    padding-right: 16px;
+    padding-left: 14px;
+    color: white;
+    font-size: 30px;
+    font-family: Stencil;
+}
+
+/*
+HOVER
+*/
+.active:hover{
+    background-color: whitesmoke;
+    border-radius: 10%;
+    color: black;
+
+}
