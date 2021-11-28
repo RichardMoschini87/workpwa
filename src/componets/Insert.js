@@ -3,7 +3,7 @@ import './Insert.css'
 
 function Insert(){
     return(
-        <div><h1>Componente di Insert component</h1></div>
+        <div id='div'><h1>Componente di Insert component</h1></div>
     )
 }
 
