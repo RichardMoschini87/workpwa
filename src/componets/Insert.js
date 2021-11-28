@@ -3,7 +3,7 @@ import './Insert.css'
 
 function Insert(){
     return(
-        <div></div>
+        <div>Componente di Insert</div>
     )
 }
 
