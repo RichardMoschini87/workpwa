@@ -4,9 +4,9 @@ import './Navbar.css'
 function Navbar() {
     return (<nav id='nav' class="navbar">
         <a class="active">Home</a>
-        <a class="active">News</a>
-        <a class="active" >Contact</a>
-        <a class="active">About</a>
+        <a class="active">Insert</a>
+        <a class="active" >Search</a>
+        <a class="active">Workout</a>
     </nav>);
 }
 
