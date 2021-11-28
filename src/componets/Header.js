@@ -5,7 +5,7 @@ import './Header.css'
 
 function Header (){
     return(<div>
-     <h1 className="titolo"> <a className="hoverTitolo">BUILD WORKOUT</a></h1>
+     <h1 className="titolo"> <a className="hoverTitolo">BUILDS WORKOUT</a></h1>
     </div>);
 }
 
