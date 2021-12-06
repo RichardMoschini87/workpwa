@@ -1,17 +1,17 @@
 export const ItemNav = [{
     title: 'Home',
     cname: 'active',
-    url: ''
+    url: '/'
 }, {
     title: 'Insert',
     cname: 'active',
-    url: ''
+    url: '/insert'
 }, {
     title: 'Search',
     cname: 'active',
-    url: ''
+    url: '/search'
 }, {
     title: 'Workout',
     cname: 'active',
-    url: ''
+    url: '/workout'
 }]

@@ -1,9 +1,8 @@
 import React from "react";
 import './Insert.css'
-import Search from "./Search";
 import incrementa from '../reduxActions/ActionIncrementa'
 import decrementa from "../reduxActions/ActionDecrementa";
-import {useSelector,useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 function Insert() {
     var cronometro = 0;
@@ -12,7 +11,7 @@ function Insert() {
     const increment = useSelector(state => state.aumentaReducer)
     const disptch = useDispatch()
     const decrement = useSelector(state => state.decrementaReducer)
-
+  
     //############## FUNZIONI CRONOMETRO #############################
     const start = () => {
         cronometro = setInterval(() => {
@@ -31,17 +30,16 @@ function Insert() {
         sec = 0;
         document.getElementById('idd').innerHTML = min + ':' + sec
     }
-//##################################################################à
+    //##################################################################à
     return (
         <div>
             <h1 id='idd'></h1>
-            <h2> PROVA STATE : { increment} </h2>
-            <button onClick={()=>disptch(incrementa())}>INCREMENTA</button>
-            <button onClick={()=>disptch(decrementa())}>DECREMENTA</button>
+            <h2> PROVA STATE : {increment + decrement} </h2>
+            <button onClick={() => disptch(incrementa())}>INCREMENTA</button>
+            <button onClick={() => disptch(decrementa())}>DECREMENTA</button>
 
             <button onClick={start} >Start</button>
             <button onClick={stop}>STOP</button>
-            <Search></Search>
         </div>
     )
 }
