@@ -2,6 +2,7 @@ import React from "react";
 import './Insert.css'
 import incrementa from '../reduxActions/ActionIncrementa'
 import decrementa from "../reduxActions/ActionDecrementa";
+import objAct from "../reduxActions/ObjAction";
 import { useSelector, useDispatch } from 'react-redux'
 
 function Insert() {
@@ -11,6 +12,12 @@ function Insert() {
     const increment = useSelector(state => state.aumentaReducer)
     const disptch = useDispatch()
     const decrement = useSelector(state => state.decrementaReducer)
+    const obj = useSelector(state=> state.objReducer)
+
+    const oggetto = {
+        nome: 'Richard',
+        cognome: 'Moschini'
+    }
   
     //############## FUNZIONI CRONOMETRO #############################
     const start = () => {
@@ -35,11 +42,13 @@ function Insert() {
         <div>
             <h1 id='idd'></h1>
             <h2> PROVA STATE : {increment + decrement} </h2>
+            <h2>STATE OBJ {obj.nome +' '+ obj.cognome}</h2>
             <button onClick={() => disptch(incrementa())}>INCREMENTA</button>
             <button onClick={() => disptch(decrementa())}>DECREMENTA</button>
 
             <button onClick={start} >Start</button>
             <button onClick={stop}>STOP</button>
+            <button onClick={()=> disptch(objAct(oggetto))}>CARICA</button>
         </div>
     )
 }
