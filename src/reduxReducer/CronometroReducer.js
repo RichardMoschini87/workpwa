@@ -1,8 +1,11 @@
+const time = {
+    minuti: 0,
+    secondi: 0
+}
 
-
-const cronoReduce = (state = '', action) => {
+const cronoReduce = (state = time , action) => {
     if (action.type == 'CRONO')
-        state = action.value
+        state = action.payload
     return state
 }
 

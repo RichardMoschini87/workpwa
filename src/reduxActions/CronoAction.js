@@ -1,8 +1,12 @@
 
 const cronoAct = (min, sec) => {
+    var time = {
+        minuti: min,
+        secondi: sec
+    }
     return {
         type: 'CRONO',
-        value: min + ':' + sec,
+        payload: time
     }
 }
 export default cronoAct
