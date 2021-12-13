@@ -9,45 +9,39 @@ function Search() {
     const obj = useSelector(state => state.objReducer)
     const time = useSelector(state => state.cronoReduce)
     const dispatch = useDispatch()
-    const [timeOn, setTimeOn] = React.useState(false)
+    const [interv, setInterv] = React.useState()
 
-    React.useEffect(() => {
-        let interval = null
-        let min = 0
-        let sec = 0
+    var min = time.minuti
+    var sec = time.secondi
 
-        if (timeOn) {
-            interval = setInterval(() => {
-                // aggiorno state
-
-                dispatch(cronoAct(min, sec))
-                // document.getElementById('time').innerHTML = min + ':' + sec
-                sec++
-                if (sec == 60) {
-                    min++
-                    sec = 0
-                }
-            }, 1000)
-        }
-        else {
-            clearInterval(interval)
-        }
-
-        return () => clearInterval(interval)
-    }, [timeOn])
     // funzione del cronometro che passa lo stato
+    const run = () => {
+        dispatch(cronoAct(min, sec))
+        sec++
+        if (sec == 60) {
+            min++
+            sec = 0
+        }
+    }
+
+    const start = () => {
+        run()
+        setInterv(setInterval(run, 1000))
+    }
+
+    const stop = () => {
+        clearInterval(interv)
+    }
 
 
 
     return (<div><h2>Componente di ricerca per : {obj.nome + ' ' + obj.cognome} </h2>
-        <h2 id="time">
+        <h2>
             {time.minuti + ':' + time.secondi}
         </h2>
-        <button onClick={() => {
-            setTimeOn(true)
-        }} >START</button>
-        <button onClick={() => { setTimeOn(false) }}>STOP</button>
-    </div >
+        <button onClick={start} >START</button>
+        <button onClick={stop}>STOP</button>
+    </div>
     )
 }
 
