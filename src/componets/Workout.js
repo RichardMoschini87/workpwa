@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import Cronometro from "./Cronometro";
 import './Workout.css'
 
 function Workout() {
-    return(
+    const [crono, setCrono] = useState(false)
+
+    const start = () => {
+        setCrono(true)
+    }
+    const stop = () => {
+        setCrono(false)
+    }
+
+    return (
         <div>
-            <h1>WORKOUT COMPONENT</h1>
+            <Cronometro cronometroStart={crono}></Cronometro>
+            <button onClick={start}>START</button>
+            <button onClick={stop}>STOP</button>
         </div>
     )
 }

@@ -2,10 +2,25 @@ h1{
 	color:white;
 	border:solid;
 }
-#elId{
-	color: white;
-}
-
 h2{
 	color: white;
 }
+.grid-container{
+	margin-top: 3%;
+	text-align: center;
+	color: white;
+	display: grid;
+	gap: 1em;
+	grid-template-areas: 
+	"uno due tre"
+	"uno due tre"
+	"uno due tre";
+}
+label{
+	color: white;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+select{
+	margin-left: 1em;
+}
+

@@ -1,0 +1,4 @@
+.esercizio:nth-child(3){
+    margin-top: 2%;
+	grid-area: tre;
+}

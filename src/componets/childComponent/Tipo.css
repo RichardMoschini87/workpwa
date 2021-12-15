@@ -1,0 +1,4 @@
+.tipo:nth-child(1){
+	grid-area: uno;
+    margin-top: 2%;
+}

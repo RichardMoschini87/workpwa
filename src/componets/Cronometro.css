@@ -1,0 +1,9 @@
+.cronometro-container{
+position: absolute;
+margin-top: 5%;
+margin-left: 70%;
+margin-right: 10%;
+}
+.cronometro{
+    color: white;
+}
