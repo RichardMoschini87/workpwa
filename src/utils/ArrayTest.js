@@ -24,8 +24,7 @@ export const rip = [
     { descrizione: '7' },
     { descrizione: '10' },
     { descrizione: '12' },
-    { descrizione: '15' },
-    { descrizione: '5' },
+    { descrizione: '15' }
 ]
 
 export const time = [

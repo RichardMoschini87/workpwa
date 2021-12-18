@@ -14,10 +14,12 @@ function Tipo() {
         if (event.target.value == 'ripetizioni') {
             // redux ripetizioni a true
             dispatch(ripAct(true))
+            dispatch(timeAct(false))
 
         } else {
             // redux a tempo a true
             dispatch(timeAct(true))
+            dispatch(ripAct(false))
         }
 
 
@@ -26,7 +28,6 @@ function Tipo() {
         <div className="tipo">
             <label>Tipo esercizio</label>
             <select onChange={handleChange}>
-                <option value="0"></option>
                 {types.map((item, index) => {
                     return (
                         <option value={item.descrizione}>{item.descrizione}</option>
