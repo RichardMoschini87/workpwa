@@ -16,7 +16,7 @@ function Esercizio(props) {
         <div className="esercizio">
             <label> Esercizio</label>
             <select id="sel" onChange={handleChange}>
-                <option value="0">Seleziona:</option>
+                <option value="0"></option>
                 {eserxices.map((item, index) => {
                     return (
                         <option value={item.descrizione}>{item.descrizione}</option>
@@ -24,7 +24,6 @@ function Esercizio(props) {
                 })}
 
             </select>
-            <span> {select} </span>
         </div>
     )
 }

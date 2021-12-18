@@ -6,7 +6,7 @@ function Time() {
         <div className="time">
              <label>tempo / numero</label>
              <select>
-    <option value="0">Select car:</option>
+    <option value="0"></option>
     <option value="1">Audi</option>
     <option value="2">BMW</option>
     <option value="3">Citroen</option>

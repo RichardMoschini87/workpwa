@@ -1,25 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import './Tipo.css'
+import { useDispatch } from "react-redux";
+import ripAct from '../../reduxActions/ActionRip'
+import timeAct from '../../reduxActions/ActionTime'
+import { types } from '../../utils/ArrayTest'
 
 function Tipo() {
+    const dispatch = useDispatch()
+
+
+    const handleChange = (event) => {
+        console.log(event.target.value)
+        if (event.target.value == 'ripetizioni') {
+            // redux ripetizioni a true
+            dispatch(ripAct(true))
+
+        } else {
+            // redux a tempo a true
+            dispatch(timeAct(true))
+        }
+
+
+    }
     return (
         <div className="tipo">
             <label>Tipo esercizio</label>
-            <select>
-    <option value="0">Select car:</option>
-    <option value="1">Audi</option>
-    <option value="2">BMW</option>
-    <option value="3">Citroen</option>
-    <option value="4">Ford</option>
-    <option value="5">Honda</option>
-    <option value="6">Jaguar</option>
-    <option value="7">Land Rover</option>
-    <option value="8">Mercedes</option>
-    <option value="9">Mini</option>
-    <option value="10">Nissan</option>
-    <option value="11">Toyota</option>
-    <option value="12">Volvo</option>
-  </select>
+            <select onChange={handleChange}>
+                <option value="0"></option>
+                {types.map((item, index) => {
+                    return (
+                        <option value={item.descrizione}>{item.descrizione}</option>
+                    )
+                })}
+
+            </select>
         </div>
     )
 }
