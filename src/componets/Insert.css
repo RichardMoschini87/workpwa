@@ -9,12 +9,7 @@ h2{
 	margin-top: 3%;
 	text-align: center;
 	color: white;
-	display: grid;
 	gap: 1em;
-	grid-template-areas: 
-	"uno due tre"
-	"uno due tre"
-	"uno due tre";
 }
 label{
 	color: white;

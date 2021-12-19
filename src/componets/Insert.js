@@ -1,9 +1,6 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import './Insert.css'
-import { useSelector, useDispatch } from 'react-redux'
-import Tipo from "./childComponent/Tipo";
-import Time from "./childComponent/Time";
-import Esercizio from "./childComponent/Esercizio";
+import SyncTYpe from "./childComponent/SyncType";
 
 function Insert() {
     const primo = 1
@@ -12,18 +9,12 @@ function Insert() {
 
     return (
         <div className="grid-container">
+            <SyncTYpe index={primo}></SyncTYpe>
 
-            <Tipo index={primo}></Tipo>
-            <Time index={primo}></Time>
-            <Esercizio index={primo}></Esercizio>
+            <SyncTYpe index={secondo}></SyncTYpe>
 
-            <Tipo index={secondo}></Tipo>
-            <Time index={secondo}></Time>
-            <Esercizio index={secondo}></Esercizio>
+            <SyncTYpe index={terzo}></SyncTYpe>
 
-            <Tipo index={terzo}></Tipo>
-            <Time index={terzo}></Time>
-            <Esercizio index={terzo}></Esercizio>
         </div>
     )
 }
