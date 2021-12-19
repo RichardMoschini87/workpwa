@@ -19,3 +19,21 @@ select{
 	margin-left: 1em;
 }
 
+.btn{
+	margin-top: 10%;
+}
+button{
+	background-color: black;
+	border-radius: 12px;
+	color: white;
+}
+
+button:hover{
+	background-color: white;
+	color: black;
+}
+
+
+
+
+

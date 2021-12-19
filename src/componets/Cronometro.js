@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import './Cronometro.css'
 import { useSelector, useDispatch } from "react-redux";
 import cronoAct from '../reduxActions/CronoAction'
+import intervalAct from '../reduxActions/ActionInterval'
 
 
 function Cronometro(props) {
     const time = useSelector(state => state.cronoReduce)
+    const intervalRedux = useSelector(state => state.intervalReduce)
     const dispatch = useDispatch()
-    const [interv, setInterv] = React.useState()
     var cronometroStart = props.cronometroStart
 
     var min = time.minuti
@@ -20,6 +21,8 @@ function Cronometro(props) {
         else {
             stop()
         }
+
+        return stop()
 
     }, [cronometroStart])
 
@@ -35,11 +38,11 @@ function Cronometro(props) {
 
     const start = () => {
         run()
-        setInterv(setInterval(run, 1000))
+        dispatch(intervalAct(setInterval(run,1000)))
     }
 
     const stop = () => {
-        clearInterval(interv)
+       clearInterval(intervalRedux)
     }
 
 

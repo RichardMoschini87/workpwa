@@ -5,7 +5,8 @@ import objReducer from './OggettiReduce'
 import cronoReduce from "./CronometroReducer";
 import timeReducer from './ReduceTime'
 import ripReducer from './ReduceTime'
-
+import intervalReduce from './IntervalReducer'
+import saveReducer from './SaveReducer'
 
 const rootReducer = combineReducers({
     aumentaReducer,
@@ -13,7 +14,9 @@ const rootReducer = combineReducers({
     objReducer,
     cronoReduce,
     timeReducer,
-    ripReducer
+    ripReducer,
+    intervalReduce,
+    saveReducer
 })
 
 export default rootReducer

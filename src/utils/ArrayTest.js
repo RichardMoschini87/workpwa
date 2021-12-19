@@ -28,7 +28,8 @@ export const rip = [
 ]
 
 export const time = [
-    { descrizione: '30' },
-    { descrizione: '60' },
-    { descrizione: '90' },
-    { descrizione: '120' }]
+    { descrizione: '30sec' },
+    { descrizione: '60sec' },
+    { descrizione: '90sec' },
+    { descrizione: '120sec' }]
+   

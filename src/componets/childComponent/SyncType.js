@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import './SyncType.css'
-import { rip, time, types,eserxices } from '../../utils/ArrayTest'
+// simulazione dati che verranno successivamente caricati 
+import { rip, time, types, eserxices } from '../../utils/ArrayTest'
 
 function SyncTYpe() {
     const [valore, setValore] = useState([{}])
-    const [times,setTimes] = useState("")
+    const [times, setTimes] = useState("")
+    const [ex, setEx] = useState("")
 
-
+//prima combo box change
     const handleChange = (event) => {
         console.log(event.target.value)
         if (event.target.value == 'ripetizioni') {
@@ -14,17 +16,18 @@ function SyncTYpe() {
 
         } else {
             setValore(time)
-
         }
     }
 
-   const handleChangeTime = (event)=>{
-    setTimes(event.target.value)
-   }
+    //seconda combo box change
+    const handleChangeTime = (event) => {
+        setTimes(event.target.value)
+    }
 
-   const handleChangeEx = (event)=>{
-    setTimes(event.target.value)
-   }
+    //terza combo box change
+    const handleChangeEx = (event) => {
+        setEx(event.target.value)
+    }
 
     return (
         <div className="container-sync">
