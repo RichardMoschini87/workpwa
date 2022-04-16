@@ -3,8 +3,8 @@ import './SyncType.css'
 // simulazione dati che verranno successivamente caricati 
 import { rip, time, types, eserxices } from '../../utils/ArrayTest'
 
-function SyncTYpe() {
-    const [valore, setValore] = useState([{}])
+function SyncTYpe(props) {
+    const [valore, setValore] = useState(time)
     const [times, setTimes] = useState("")
     const [ex, setEx] = useState("")
 
